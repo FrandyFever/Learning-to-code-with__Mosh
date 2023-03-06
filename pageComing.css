@@ -222,3 +222,38 @@ li {
         
     }
 }
+
+/* Spinner */
+
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #2C3E50;
+    color: #d30505;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: transform 0.10ms;
+    position: absolute;
+    top: 315px;
+    left: 815px;
+}
+
+.is-loading::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #070000;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
